@@ -1,0 +1,12 @@
+    # Создаем результат, который будет отображаться в инлайн-режиме
+    results.append(
+        InlineQueryResultArticle(
+            id="1",
+            title="Магазин",
+            input_message_content=InputTextMessageContent("Нажмите кнопку ниже, чтобы перейти в магазин."), 
+            reply_markup=reply_markup
+        )
+    )
+
+    # Отправляем результаты пользователю
+    await update.inline_query.answer(results)

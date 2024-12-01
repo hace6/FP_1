@@ -1,0 +1,101 @@
+.image-container {
+    position: relative;
+    
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+    
+}
+.pt-6{
+    padding-top: 5.5rem !important;
+}
+.pb-6{
+    padding-bottom: 5.5rem !important;
+}
+.mb-6{
+    margin-bottom: 5.5rem !important;
+}
+.ptH-3{
+    padding-top: 1.40rem !important;
+}
+body, html {
+    height: 100vh;
+    margin: 0;
+    background-image: url(Wallpaper/photo_2024-12-01_01-15-01.jpg);
+    object-fit: cover;
+}
+.wallpaper{    
+    background-color: #ffffffab;
+    color: black;
+}
+#searchField{
+    width: 90%;
+}
+.flavor-list {
+    transform: scaleX(-1);
+    display: none; /* Скрываем список вкусов по умолчанию */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный фон для списка */
+    color: #000;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.image-container:hover .flavor-list {
+    display: block; /* Показываем список вкусов при наведении */
+}
+.image-container:hover{
+   transform: rotateY(180deg); 
+}
+
+.flavor-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.flavor-list li {
+    margin: 5px 0;
+}
+.card_rounded{
+    border-radius: 1.25rem !important;
+}
+.rounded_header{
+    width: 90%;
+    border-bottom-right-radius: 1.25rem;
+    z-index: 122;
+    border-bottom-left-radius: 1.25rem;
+    font-family: Comfortaa, sans-serif;
+}
+p{
+    font-weight: bold; 
+}
+h1, h2, h3, h4, h5, p, a, button, input{
+    font-family: Comfortaa, sans-serif;
+}
+.rounded_footer{
+    width: 90%;
+    border-top-right-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+}
+.bg_btn{
+    font-family: Comfortaa, sans-serif;
+}
+#scrollToTopBtn {
+    transition: right 0.7s ease, visibility 0.7s ease; /* Плавная анимация для перемещения кнопки */
+    position: fixed;
+    bottom: 20px;  /* Расположение кнопки */
+    right: -80px;  /* Скрыта слева */
+    visibility: hidden; /* Скрыта по умолчанию */
+}
+
+#scrollToTopBtn.show {
+    right: 0px; /* Когда показываем, кнопка появляется справа */
+    visibility: visible; /* Показываем элемент */
+}
+#scrollToTopBtn.hide {
+    right: -70px; /* Когда скрываем кнопку, она уходит в правый край */
+    visibility: hidden; /* Делаем кнопку невидимой */
+}
